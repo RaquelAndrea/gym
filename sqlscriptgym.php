@@ -1,35 +1,30 @@
 // Hurrich Code
 
-DROP TABLE feedback;
-DROP TABLE schedule;
+DROP TABLE IF EXISTS feedback;
+DROP TABLE IF EXISTS schedule;
 
-
-
+-- Feedback Table
 CREATE TABLE feedback (
     feedback_id INT PRIMARY KEY,
-    feedback_text VARCHAR NOT NULL,
-    feedback_date date NOT NULL
+    feedback_text TEXT NOT NULL,
+    feedback_date DATE NOT NULL
 );
 
-
+-- Schedule Table
 CREATE TABLE schedule (
     schedule_id INT PRIMARY KEY,
-    duration INT(50) NOT NULL,
-    announcement_text NOT NULL,
+    duration INT NOT NULL,
+    announcement TEXT NOT NULL
 );
 
-
-
-
+-- Insert into schedule
 INSERT INTO schedule (schedule_id, duration, announcement) VALUES
-( 1, 1,'*Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.');
+(1, 1, 'Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.');
 
-
+-- Insert into feedback
 INSERT INTO feedback (feedback_id, feedback_text, feedback_date) VALUES
-(1, 'Great practice today!', '2025-03-30'),
-(2, 'Need more water breaks during warmups.', '2025-03-29'),
-(3, 'Loved the team-building exercises!', '2025-03-28');
-/// Raquel's code
+(1, 'Great practice today!', '2025-03-20');
+
 DROP TABLE crowd_meter;
 DROP TABLE gym_user;
 
