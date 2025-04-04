@@ -1,3 +1,36 @@
+//Travis code
+DROP TABLE administration;
+DROP TABLE FAQ;
+
+CREATE TABLE administration (
+    username VARCHAR (30) PRIMARY KEY,
+    fname VARCHAR(15) NOT NULL,
+    lname VARCHAR(15) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    PRIMARY KEY (username)
+    ENGINE = InnoDB;
+
+CREATE TABLE FAQ (
+    question VARCHAR PRIMARY KEY,
+    answer VARCHAR NOT NULL
+)
+ENGINE = InnoDB;
+
+
+INSERT INTO administration ( username,fname, lname, email, password) VALUES
+('coach.torrico','Coach', 'Torrico', 'coach.torrico@wau.edu', 'adminpass123'),
+( 'coach.spring','Coach', 'Spring', 'coach.spring@wau.edu', 'securepass456');
+
+INSERT INTO FAQ (question, answer) VALUES ('Is the Gym only for student athletes?', 'No the gym is for everyone')
+
+
+
+
+
+
+
+
 // Hurrich Code
 
 DROP TABLE feedback;
