@@ -15,7 +15,7 @@ CREATE TABLE feedback (
 CREATE TABLE schedule (
     schedule_id INT PRIMARY KEY,
     duration INT(50) NOT NULL,
-    announcement_text NOT NULL,
+    announcement_text TEXT  NOT NULL,
 );
 
 
@@ -23,9 +23,12 @@ CREATE TABLE schedule (
 
 INSERT INTO schedule (schedule_id, duration, announcement) VALUES
 ( 1, 1,'*Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.');
-
+  
+  
 
 INSERT INTO feedback (feedback_id, feedback_text, feedback_date) VALUES
+
+
 (1, 'Great practice today!', '2025-03-30'),
 (2, 'Need more water breaks during warmups.', '2025-03-29'),
 (3, 'Loved the team-building exercises!', '2025-03-28');
@@ -38,13 +41,6 @@ INSERT INTO feedback (feedback_id, feedback_text, feedback_date) VALUES
 DROP TABLE crowd_meter;
 DROP TABLE gym_user;
 
-
-
-/*DROP TABLE schedule;
-DROP TABLE FAQ;
-DROP TABLE feedback;
-DROP TABLE administration;
-*/
 
 CREATE TABLE gym_user(
 user_id INT(8) NOT NULL ,
