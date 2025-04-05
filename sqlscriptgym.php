@@ -21,7 +21,7 @@ CREATE TABLE administration (
     fname VARCHAR(15) NOT NULL,
     lname VARCHAR(15) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    password VARCHAR(100) NOT NULL
+    password VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE FAQ (
