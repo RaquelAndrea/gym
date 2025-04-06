@@ -45,7 +45,7 @@
     <div class="actions">
       <p><a href="gym_sign_up.php" title="Add"> Add</a></p>
       <p><a href="coach_main_delete_user.php" title="delete"> delete</a></p>
-      <p><a href="coach_main_edit_user.php" title="edit"> edit</a></p></p>
+      <p><a href="coach_main_edit_user.php" title="edit"> edit</a></p>
     </div>
   </div>
 </body>
