@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <table >
+<head></head>
+    <body>
+        <table >
         <tr valign = "center">
             <td >
             <ul>
@@ -14,5 +16,6 @@
             </ul>
             </td>
         </tr>
-    </table>
+        </table>
+    </body>
 </html>
