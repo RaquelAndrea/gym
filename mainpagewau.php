@@ -1,4 +1,13 @@
 <html>
+    <head>
+    <style>
+        *{
+            text-algin:center;
+        }
+
+    </style>
+    </head>
+    
     <body>
         <p><a href="student_sign_in.php" title="Student Sign In">Student Sign In</a></p>
         <p><a href="feedback.php" title="Feedback">Feedback</a></p>
