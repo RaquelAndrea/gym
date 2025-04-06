@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <body>
         <p><a href="student_sign_in.php" title="Student Sign In">Student Sign In</p>
