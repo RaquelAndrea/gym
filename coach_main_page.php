@@ -17,7 +17,7 @@
     <tr valign="center">
       <td>
         <ul>
-          <li><a href="sign_up.php" title="Signup">Sign Up</a></li>
+          <li><a href="main_sign_up.php" title="Signup">Sign Up</a></li>
           <li><a href="faq_page.php" title="Faq">FAQ Page</a></li>
           <li><a href="suggestion.php" title="Suggestions">Suggestions/Complaints</a></li>
           <li><a href="logout.php" title="Logout">Logout</a></li>
