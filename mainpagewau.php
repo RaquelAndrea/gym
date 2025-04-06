@@ -1,4 +1,5 @@
-<Html>
+<!DOCTYPE html>
+<html>
     <table >
         <tr valign = "center">
             <td >
@@ -11,7 +12,7 @@
                 <li><a href="coach_sign_in.php" title="Coach Sign In"> Coach Sign In</a>
                
             </ul>
-</td>
-</tr>
-</table>
-</Html>
+            </td>
+        </tr>
+    </table>
+</html>
