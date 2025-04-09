@@ -1,3 +1,9 @@
+<?php
+if (isset($_POST['go_back'])):
+  header("Location: mainpagewau.php");
+endif;
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +25,12 @@
         <ul>
           <li><a href="main_sign_up.php" title="Signup">Sign Up</a></li>
           <li><a href="faq_page.php" title="Faq">FAQ Page</a></li>
-          <li><a href="suggestion.php" title="Suggestions">Suggestions/Complaints</a></li>
-          <li><a href="logout.php" title="Logout">Logout</a></li>
+          <li><a href="feedback.php" title="Feedback">Feedback</a></li>
+          <li><a href="change_announcement.php" title="Suggestions">Schedule Announcement</a></li>
+          <li>
+            <form method="POST" action="">
+            <input type="submit" name="go_back" value="Logout">
+            </form></li>
         </ul>
       </td>
     </tr>
