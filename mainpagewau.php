@@ -87,7 +87,7 @@
       </div>
 
       <div class="img-link">
-        <a href="faq.php">
+        <a href="main_faq_withcss.php">
           <img src="https://thumbs.dreamstime.com/b/icon-faqs-question-mark-faqs-263880000.jpg" alt="FAQ Symbol">
           <div class="link-label">FAQ</div>
         </a>
