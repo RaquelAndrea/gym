@@ -31,7 +31,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT243RYpMJZ7i_O8XB1NJMTlB2ZybjjLCrTVg&s" alt="WAU logo" width="100"/>
             <h1>Schedule</h1>
         </div>
-  
+        <div class="container">
         <h2 style="text-align: center;"> Hours</h1>
         <?php 
             if (mysqli_num_rows($result) > 0): 
@@ -99,7 +99,7 @@
                 <td>CLOSED AT NOON</td>
             </tr>
         </table>
-        
+        </div>
         <div style="text-align: right;">
             <form method="POST" action="">
                 <input type="submit" name="go_back" value="Go Back" class="go_back">
