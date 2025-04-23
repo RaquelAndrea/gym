@@ -101,9 +101,9 @@ tr:hover {
 
     <h2>Washington Adventist University<br>Athletics</h2>
     <div class="actions">
-      <a href="gym_sign_up.php" class="btn-link" title="Add">Add User</a><br>
-      <a href="coach_main_delete_user.php" class="btn-link" title="Delete">Delete User</a><br>
-      <a href="coach_main_edit_user.php" class="btn-link" title="Edit">Edit User</a>
+      <p><a href="gym_sign_up.php" title="Add"> Add</a></p>
+      <p><a href="coach_main_delete_user_withcss.php" title="delete"> Delete</a></p>
+      <p><a href="coach_main_edit_usercss.php" title="edit"> Edit</a></p>
     </div>
 </div>
 </body>
