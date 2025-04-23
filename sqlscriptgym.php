@@ -33,12 +33,16 @@ CREATE TABLE schedule (
     schedule_id INT PRIMARY KEY,
     start_date DATE,
     end_date DATE,
-    announcement_text TEXT NOT NULL
+    announcement_text TEXT NOT NULL,
+    username VARCHAR(30) NOT NULL,
+    FOREIGN KEY (username) REFERENCES administration(username)
 ) ENGINE=InnoDB;
 
 CREATE TABLE FAQ (
     question VARCHAR(255) PRIMARY KEY,
-    answer VARCHAR(255) NOT NULL
+    answer VARCHAR(255) NOT NULL,
+    username VARCHAR(30) NOT NULL,
+    FOREIGN KEY (username) REFERENCES administration(username)
 ) ENGINE=InnoDB;
 
 CREATE TABLE administration (
@@ -55,11 +59,11 @@ INSERT INTO gym_user (user_id, fname, lname, email, address, phone_num, DOB) VAL
 INSERT INTO administration (username, fname, lname, email, password)
 VALUES ('coach.spring', 'Coach', 'Spring', 'coach.spring@wau.edu', MD5('securepass456'));
 
-INSERT INTO FAQ (question, answer) VALUES
-('Is the Gym only for student athletes?', 'No the gym is for everyone');
+INSERT INTO FAQ (question, answer,username) VALUES
+('Is the Gym only for student athletes?', 'No the gym is for everyone','coach.spring');
 
-INSERT INTO schedule (schedule_id,  start_date, end_date, announcement_text) VALUES
-(1,'2025-03-20', '2025-04-20', '*Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.');
+INSERT INTO schedule (schedule_id,  start_date, end_date, announcement_text, username) VALUES
+(1,'2025-03-20', '2025-04-20', '*Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.','coach.spring' );
 
 INSERT INTO feedback (feedback_id, feedback_text, feedback_date) VALUES
 (1, 'Great practice today!', '2025-03-20');
