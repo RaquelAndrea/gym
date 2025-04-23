@@ -35,12 +35,12 @@
             }
 
  
-            header("Location: successfullylogin.php");
+            header("Location: successfullylogin_withcss.php");
             exit();
         } 
         else 
         {
-            header("Location: invalid_id.php");
+            header("Location: invalid_id_withcss.php");
             exit();
         }
 
