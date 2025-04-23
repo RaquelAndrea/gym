@@ -16,11 +16,12 @@ CREATE TABLE gym_user (
 ) ENGINE=InnoDB;
 
 CREATE TABLE crowd_meter (
-    current INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    time_entery INT NOT NULL,
+    time_entry DATETIME NOT NULL,
     FOREIGN KEY (user_id) REFERENCES gym_user(user_id)
-) ENGINE=InnoDB;
+);
+
 
 CREATE TABLE feedback (
     feedback_id INT PRIMARY KEY,
@@ -30,7 +31,8 @@ CREATE TABLE feedback (
 
 CREATE TABLE schedule (
     schedule_id INT PRIMARY KEY,
-    duration INT NOT NULL,
+    start_date DATE,
+    end_date DATE,
     announcement_text TEXT NOT NULL
 ) ENGINE=InnoDB;
 
@@ -50,17 +52,18 @@ CREATE TABLE administration (
 INSERT INTO gym_user (user_id, fname, lname, email, address, phone_num, DOB) VALUES
 (87959403, 'Travis', 'James', 'tjames@gmail.com', '203 Kimberly Rd, Winchester VA', '540-533-6738', '2003-03-01');
 
-INSERT INTO crowd_meter (current, user_id, time_entery) VALUES
-(1, 87959403, 1300);
-
-INSERT INTO administration (username, fname, lname, email, password) VALUES
-('coach.spring', 'Coach', 'Spring', 'coach.spring@wau.edu', 'securepass456');
+INSERT INTO administration (username, fname, lname, email, password)
+VALUES ('coach.spring', 'Coach', 'Spring', 'coach.spring@wau.edu', MD5('securepass456'));
 
 INSERT INTO FAQ (question, answer) VALUES
 ('Is the Gym only for student athletes?', 'No the gym is for everyone');
 
-INSERT INTO schedule (schedule_id, duration, announcement_text) VALUES
-(1, 1, '*Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.');
+INSERT INTO schedule (schedule_id,  start_date, end_date, announcement_text) VALUES
+(1,'2025-03-20', '2025-04-20', '*Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.');
 
 INSERT INTO feedback (feedback_id, feedback_text, feedback_date) VALUES
 (1, 'Great practice today!', '2025-03-20');
+
+INSERT INTO crowd_meter (user_id, time_entry)
+VALUES (87959403, '2025-04-08 14:30:00');
+
