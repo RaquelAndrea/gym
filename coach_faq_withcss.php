@@ -168,7 +168,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
 </div>
 
 <div class="go_back">
-    <a href="coach_main.php" class="btn-link">Go Back</a>
+    <a href="coach_main_page.php" class="btn-link">Go Back</a>
 </div>
 
 </body>
