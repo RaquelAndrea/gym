@@ -16,8 +16,8 @@
     
     <div class="container">
       <a href="main_sign_up.php" title="Signup" class="btn-link">Sign Up</a><br/>
-      <a href="faq_page.php" title="Faq" class="btn-link">FAQ Page</a><br/>
-      <a href="feedback.php" title="Feedback" class="btn-link" >Feedback</a><br/>
+      <a href="coach_faq_withcss.php" title="Faq" class="btn-link">FAQ Page</a><br/>
+      <a href="coach_feedback.php" title="Feedback" class="btn-link" >Feedback</a><br/>
       <a href="change_announcement.php" title="Suggestions" class="btn-link" >Schedule Announcement</a>
       
       <form method="POST" action="">
