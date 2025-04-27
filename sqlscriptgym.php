@@ -12,7 +12,9 @@ CREATE TABLE gym_user (
     email VARCHAR(50) NOT NULL,
     address VARCHAR(400) NOT NULL,
     phone_num VARCHAR(12) NOT NULL,
-    DOB DATE NOT NULL
+    DOB DATE NOT NULL,
+    created_by VARCHAR(30),
+    FOREIGN KEY (created_by) REFERENCES administration(username)
 ) ENGINE=InnoDB;
 
 CREATE TABLE crowd_meter (
@@ -26,8 +28,11 @@ CREATE TABLE crowd_meter (
 CREATE TABLE feedback (
     feedback_id INT PRIMARY KEY,
     feedback_text VARCHAR(255) NOT NULL,
-    feedback_date DATE NOT NULL
+    feedback_date DATE NOT NULL,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES gym_user(user_id)
 ) ENGINE=InnoDB;
+
 
 CREATE TABLE schedule (
     schedule_id INT PRIMARY KEY,
@@ -53,8 +58,8 @@ CREATE TABLE administration (
     password VARCHAR(100) NOT NULL
 ) ENGINE=InnoDB;
 
-INSERT INTO gym_user (user_id, fname, lname, email, address, phone_num, DOB) VALUES
-(87959403, 'Travis', 'James', 'tjames@gmail.com', '203 Kimberly Rd, Winchester VA', '540-533-6738', '2003-03-01');
+INSERT INTO gym_user (user_id, fname, lname, email, address, phone_num, DOB, created_by) 
+VALUES (87959403, 'Travis', 'James', 'tjames@gmail.com', '203 Kimberly Rd, Winchester VA', '540-533-6738', '2003-03-01', 'coach.spring');
 
 INSERT INTO administration (username, fname, lname, email, password)
 VALUES ('coach.spring', 'Coach', 'Spring', 'coach.spring@wau.edu', MD5('securepass456'));
@@ -65,8 +70,8 @@ INSERT INTO FAQ (question, answer,username) VALUES
 INSERT INTO schedule (schedule_id,  start_date, end_date, announcement_text, username) VALUES
 (1,'2025-03-20', '2025-04-20', '*Special Announcement: Due to the unforeseen snowstorm the gym along with the school will be closed.','coach.spring' );
 
-INSERT INTO feedback (feedback_id, feedback_text, feedback_date) VALUES
-(1, 'Great practice today!', '2025-03-20');
+INSERT INTO feedback (feedback_id, feedback_text, feedback_date, user_id) VALUES
+(1, 'Great practice today!', '2025-03-20',87959403);
 
 INSERT INTO crowd_meter (user_id, time_entry)
 VALUES (87959403, '2025-04-08 14:30:00');
