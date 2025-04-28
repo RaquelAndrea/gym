@@ -14,10 +14,14 @@ if (isset($_POST['submit'])) {
     $feedback_id = generateFeedbackId($conn);
     $feedback_date = date('Y-m-d');
     $feedback_text = $_POST['feedback_text'];
+    
+    // You must decide what to do with user_id
+    // For now, we can hardcode it (example: 87959403)
+    $user_id = 87959403;  // Hardcoded or fetch later from login/session
 
     if (!empty($feedback_text)) {
-        $query = "INSERT INTO feedback (feedback_id, feedback_text, feedback_date) 
-                  VALUES ('$feedback_id', '$feedback_text', '$feedback_date')";
+        $query = "INSERT INTO feedback (feedback_id, feedback_text, feedback_date, user_id) 
+                  VALUES ('$feedback_id', '$feedback_text', '$feedback_date', '$user_id')";
         $result = mysqli_query($conn, $query);
         if ($result) {
             $message = "Congratulations, your feedback was submitted!";
